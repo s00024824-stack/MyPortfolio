@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const url = button.getAttribute("href");
       if (url && url !== "#") {
         iframe.src = url; 
-        preview.style.display = "block"; 
+        preview.classList.add("active"); 
       }
     });
 
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
     button.addEventListener("mouseleave", () => {
-      preview.style.display = "none"; 
+      preview.classList.remove("active"); 
       iframe.src = ""; 
     });
   });
