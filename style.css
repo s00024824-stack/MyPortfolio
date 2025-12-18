@@ -2,16 +2,15 @@
 :root {
   background-color: rgb(40, 39, 39);
   color: #ffffff;
-  --colore-primario: #eeb862; /* Accento Arancione/Rosso */
-  --colore-secondario: #1a1919; /* Grigio chiaro per card/sfondi */
+  --colore-primario: #eeb862; 
+  --colore-secondario: #1a1919; 
   --font-famiglia: "Inter", sans-serif;
   --spaziatura-sezione: 120px;
 }
 
 .navbar a {
   text-decoration: none;
-  --colore-secondario: #f0f0f0; /* Grigio chiaro per card/sfondi */
-  color: white;
+  --colore-secondario: #f0f0f0; 
   background-color: #906622;
 }
 * {
@@ -27,9 +26,7 @@ body {
   line-height: 1.6;
 }
 
-/* -------------------------------------- */
-/* 2.2 LAYOUT E GRIGLIE */
-/* -------------------------------------- */
+
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -41,7 +38,7 @@ section {
   min-height: 40vh;
 }
 
-/* Navbar */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -64,7 +61,6 @@ section {
   margin-left: 20px;
 }
 
-/* HERO SECTION */
 .hero-section {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -88,7 +84,7 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-/* PROJECTS SECTION */
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -107,7 +103,7 @@ h1 {
   border-radius: 4px;
 }
 
-/* ABOUT SECTION */
+
 .about-content-grid {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -126,7 +122,7 @@ h1 {
 .about a {
   text-decoration: none;
 }
-/* BOTTONI E CTA */
+
 .cta-button {
   display: inline-block;
   padding: 12px 24px;
@@ -150,7 +146,7 @@ h1 {
   padding: 15px 30px;
 }
 
-/* ANIMAZIONE FADE-IN */
+
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -161,7 +157,7 @@ h1 {
   transform: translateY(0);
 }
 
-/* RESPONSIVITÀ */
+
 @media (max-width: 768px) {
   .hero-section {
     grid-template-columns: 1fr;
@@ -191,13 +187,31 @@ h1 {
 }
 .navbar a {
   text-decoration: none;
-  --colore-secondario: #f0f0f0; /* Grigio chiaro per card/sfondi */
-  color: white;
-  background-color: #ff5722;
+  --colore-secondario: #f0f0f0; 
+  background-color: # #eeb862;
 }
 .project-card img {
   width: 100%;
-  height: 200px; /* Imposta un'altezza fissa uguale per tutti */
+  height: 200px; 
   object-fit: cover;
   border-radius: 8px;
+}
+.site-preview {
+  position: fixed;
+  width: 350px;
+  height: 250px;
+  border: 2px solid  #eeb862; 
+  border-radius: 12px;
+  overflow: hidden;
+  display: none;
+  z-index: 1000;
+  background: #000;
+  pointer-events: none; 
+
+.site-preview iframe {
+  width: 200%; 
+  height: 200%;
+  transform: scale(0.5); 
+  transform-origin: 0 0;
+  border: none;
 }
