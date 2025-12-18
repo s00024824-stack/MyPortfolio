@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Smooth Scrolling per la Navigazione interna
+  
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 2. Animazioni all'entrata in vista (Fade-in usando Intersection Observer)
+  
   const observerOptions = {
     root: null,
     rootMargin: "0px",
@@ -25,9 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Aggiunge la classe 'visible' per attivare l'animazione CSS
+        
         entry.target.classList.add("visible");
-        // Smetti di osservare l'elemento
+        
         observer.unobserve(entry.target);
       }
     });
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(preview);
 
   const iframe = preview.querySelector("iframe");
-
+  
   const buttons = document.querySelectorAll(".project-card .cta-button");
 
   buttons.forEach((button) => {
@@ -54,11 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("mouseenter", (e) => {
       const url = button.getAttribute("href");
       if (url && url !== "#") {
-        iframe.src = url;
+        iframe.src = url; 
         preview.style.display = "block"; 
       }
     });
 
+    
     button.addEventListener("mousemove", (e) => {
       preview.style.left = e.clientX + 15 + "px";
       preview.style.top = e.clientY + 15 + "px";
@@ -68,5 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("mouseleave", () => {
       preview.style.display = "none"; 
       iframe.src = ""; 
+    });
   });
 });
+
