@@ -1,5 +1,4 @@
-/* -------------------------------------- */
-/* 2.1 VARIABILI E RESET GLOBALE */
+
 :root {
   background-color: rgb(40, 39, 39);
   color: #ffffff;
@@ -195,4 +194,10 @@ h1 {
   --colore-secondario: #f0f0f0; /* Grigio chiaro per card/sfondi */
   color: white;
   background-color: #ff5722;
+}
+.project-card img {
+  width: 100%;
+  height: 200px; /* Imposta un'altezza fissa uguale per tutti */
+  object-fit: cover;
+  border-radius: 8px;
 }
