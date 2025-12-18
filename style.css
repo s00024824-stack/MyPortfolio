@@ -198,8 +198,8 @@ h1 {
 }
 .site-preview {
   position: fixed;
-  width: 350px;
-  height: 250px;
+  width: 400px;
+  height: 280px;
   border: 2px solid  #eeb862; 
   border-radius: 12px;
   overflow: hidden;
@@ -209,9 +209,9 @@ h1 {
   pointer-events: none; 
 
 .site-preview iframe {
-  width: 200%; 
-  height: 200%;
-  transform: scale(0.5); 
+  width: 1200px; 
+  height: 840%;
+  transform: scale(0.33); 
   transform-origin: 0 0;
   border: none;
 }
