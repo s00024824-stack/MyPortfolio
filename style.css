@@ -184,6 +184,12 @@ h1 {
   section {
     padding: 60px 0;
   }
+  .site-preview, 
+  .site-preview.active {
+    display : none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
 }
 .navbar a {
   text-decoration: none;
